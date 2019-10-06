@@ -26,10 +26,12 @@ def reduce(array, sv=nil) # since the second argument in this lab is optional we
   end
 
   while i < array.length #this loop will execute until the length of the array is met
-    sum = yield(sum, array[i]) #we're using this yield keyword to pass the sum(which is the staring value
+    sum = yield(sum, array[i]) #we're using this yield keyword to pass the two bits of data to the block that
+                                #will be called on our reduce method
+                                #the sum(which is the staring value
                                 # which could either be the actual value we're starting at or the first element)
                               # and then we're passing an element(array[i])
-    i += 1 #increments counter until end of array 
+    i += 1 #increments counter until end of array
   end
   sum
 end
